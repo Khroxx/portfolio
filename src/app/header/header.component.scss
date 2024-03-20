@@ -5,10 +5,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 37px 100px;
+    position: fixed;
+    z-index: 10;
     >h1{
         color: whitesmoke;
         text-align: center;
         font-size: 40px;
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     

@@ -1,0 +1,19 @@
+<div *ngFor="let project of projects" class="project-container">
+    <div class="each-project">
+        <img [src]="project.img" alt="{{project.name}}">
+        <img class="shadow" src="assets/img/vector5.png" alt="">
+        <div class="hover-up">
+            <div class="buttons">
+                <button (click)="githubLink(project)" class="buttonL">Github</button>
+                <button (click)="livetestLink(project)" class="buttonR">Live test</button>
+            </div>
+            <div class="description-container">
+                <h3>{{project.name}}</h3>
+                <span> {{project.description}}</span>
+                <p>{{project.skillsUsed.join(' | ')}}</p>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
