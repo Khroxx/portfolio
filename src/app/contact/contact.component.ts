@@ -1,18 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, MatCheckboxModule] ,
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
   http = inject(HttpClient);
+  color = 'accent'
 
   contactData = {
     name : '',
@@ -20,12 +21,8 @@ export class ContactComponent {
     message : ''
   }
 
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted) {
-  //     console.log(this.contactData);
-  //   }
-  // }
-
+  isCheckboxChecked = false;
+  isSubmitClicked = false;
   mailTest = true;
 
   post = {
@@ -40,7 +37,8 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    this.isSubmitClicked = true;
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.isCheckboxChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -57,4 +55,11 @@ export class ContactComponent {
       ngForm.resetForm();
     }
   }
+
+  checkboxChange(event: any) {
+    this.isCheckboxChecked = event.checked;
+  }
+
+  
+  
 }

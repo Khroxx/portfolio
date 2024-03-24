@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 90vh;
+    height: 95vh;
 }
 .headline{
     position: relative;
@@ -55,11 +55,8 @@ button{
     }
 }
 .top-links{
-    // position: absolute;
-    // bottom: 300px;
     display: flex;
     align-items: center;
-    // left: 0;
     gap: 42px;
     >a{
         text-decoration: none;
