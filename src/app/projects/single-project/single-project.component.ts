@@ -16,7 +16,7 @@ export class SingleProjectComponent {
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       skillsUsed: ['JavaScript', 'HTML', 'CSS'],
       gitlink: 'https://github.com/Khroxx/Pollo-Loco-2',
-      testlink: ''
+      testlink: '/pollo-loco/index.html'
     },
     {
       name: 'Join',
@@ -24,7 +24,7 @@ export class SingleProjectComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       skillsUsed: ['JavaScript', 'HTML', 'CSS'],
       gitlink: 'https://github.com/Khroxx/Join',
-      testlink: ''
+      testlink: '/join/index.html'
     },
     {
       name: 'Coming next...',

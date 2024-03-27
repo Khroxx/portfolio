@@ -2,7 +2,7 @@
     width: 100%;
     padding-bottom: 100px;
     >span{
-        display: block;
+        display: flex;
         margin-left: 124px;
         width: 400px;
         height: 50px;
@@ -34,8 +34,73 @@
 .singles{
     display: flex;
     justify-content: space-evenly;
-    // align-items: ;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 80px;
+}
+.shadow-container-blue{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+.shadow-blue{
+    position: relative;
+    top: -500px;
+}
+.shadow-container-green{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+.shadow-green{
+    position: relative;
+    top: -800px;
+}
+@media (max-width: 550px){
+    .portfolio{
+        >span{
+            margin: 0;
+            width: calc(100% - 40px);
+            font-size: 20px;
+            padding: 20px;  
+        }
+    }
+    .headline{
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+@media (max-width: 470px){
+
+    .headline{
+        justify-content: flex-start;
+        >h1{
+            font-size: 70px;
+        }
+        >.spacer{
+            width: 10px;
+        }
+    }
+    .portfolio{
+        >span{
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 340px){
+    .portfolio{
+        padding-top: 70px;
+    }
+    .shadow-container-green{
+        width: 100%;
+        >.shadow-green{
+            width: 100%;
+        }
+    }
+    .shadow-container-blue{
+        width: 100%;
+        >.shadow-blue{
+            width: 100%;
+        }
+    }
 }

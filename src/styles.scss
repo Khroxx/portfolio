@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 *{
     margin: 0;
     scroll-behavior: smooth;
@@ -12,9 +13,6 @@ body{
 h1, h2, h3, h4{
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
-}
-#checkbox{
-    color: rgba(112, 230, 28, 1) !important;
 }
 
 @font-face {
@@ -113,6 +111,28 @@ h1, h2, h3, h4{
     font-weight: 100;
     font-style: italic;
 }
+#about-me::before,
+#skills::before,
+#projects::before {
+    content: "";
+    display: block;
+    height: 150px; /* Adjust this value to match your header's height */
+    margin: -100px 0 0; /* This negative margin is the same as the height */
+    visibility: hidden;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::-webkit-scrollbar {
+    width: 14px; /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255); /* Color of the track (scrollbar background) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 58, 94); /* Color of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(65, 91, 145); /* Color of the scroll thumb when hovered */
+}

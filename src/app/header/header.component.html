@@ -1,8 +1,22 @@
 <div id="header">
-    <h1>Bari</h1>
+    <a href="#"><h1>Bari</h1></a>
     <div class="links">
         <button><a href="#about-me">About me</a></button>
         <button><a href="#skills">Skills</a></button>
         <button><a href="#projects">Portfolio</a></button>
     </div>
+
+
+       <div class="burger-menu" (click)="toggleMenu()">
+        <div class="line" [ngClass]="{'x': menuOpen}"></div>
+        <div class="line" [ngClass]="{'x': menuOpen}"></div>
+        <div class="line" [ngClass]="{'x': menuOpen}"></div>
+      </div>
+      <div class="mobile-menu" *ngIf="menuOpen" [ngClass]="{'open': menuOpen}">
+        <button (click)="toggleMenu()"><a href="#about-me">About me</a></button>
+        <button (click)="toggleMenu()"><a href="#skills">Skills</a></button>
+        <button (click)="toggleMenu()"><a href="#projects">Portfolio</a></button>
+        <button (click)="toggleMenu()"><a href="#contact">Contact</a></button>
+      </div>
 </div>
+

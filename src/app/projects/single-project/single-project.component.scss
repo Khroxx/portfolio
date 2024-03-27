@@ -1,5 +1,4 @@
 .project-container{
-    // width: 40%;
     width: 600px;
     height: 600px;
     background: rgba(20, 29, 47, 1);
@@ -17,10 +16,13 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    // z-index: 1;
+    border-radius: 15px;
     &:hover{
         .hover-up {
-            display: block;
+            display: flex;
             position: absolute;
+            flex-direction: column;
             width: 100%;
             height: 100%;
             background-color: rgba(172, 172, 172, 0.4);
@@ -47,6 +49,7 @@
 .hover-up{
     display: none;
     z-index: 3;
+    justify-content: space-between;
 }
 
 .buttons{
@@ -109,5 +112,83 @@
         color: rgba(112, 230, 28, 1);
         font-size: 23px;
         font-weight: 400;
+    }
+}
+
+@media (max-width: 700px){
+    .project-container{
+        width: 90%;
+        height: 90%;
+    }
+    .each-project{
+        
+        >img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .description-container{
+        padding: 10px 40px;
+        width: calc(100% - 80px);
+        height: 300px;
+        >span{
+            width: 100%;
+        }
+    }
+    .shadow{
+        display: none;
+    }
+
+}
+@media (max-width: 600px){
+    .description-container{
+        padding: 6px 20px;
+        width: calc(100% - 40px);
+        >h3{
+            font-size: 25px;
+        }
+        >span{
+            font-size: 18px;
+        }
+        >p{
+            font-size: 18px;
+        }
+    }
+}
+@media (max-width: 400px){
+    .description-container{
+        height: 200px;
+        gap: 12px;
+        >h3{
+            font-size: 20px;
+        }
+        >span{
+            font-size: 16px;
+        }
+        >p{
+            font-size: 16px;
+        }
+    }
+    .buttons{
+        height: 200px;
+        >button{
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    }
+}
+@media (max-width: 400px){
+    .description-container{
+        height: 170px;
+        gap: 4px;
+        >h3{
+            font-size: 16px;
+        }
+        >span{
+            font-size: 14px;
+        }
+        >p{
+            font-size: 14px;
+        }
     }
 }

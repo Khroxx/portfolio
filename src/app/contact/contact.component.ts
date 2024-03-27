@@ -13,7 +13,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 })
 export class ContactComponent {
   http = inject(HttpClient);
-  color = 'accent'
 
   contactData = {
     name : '',
@@ -23,7 +22,7 @@ export class ContactComponent {
 
   isCheckboxChecked = false;
   isSubmitClicked = false;
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://barisopa.de/sendMail.php', //Homepage ändern
@@ -50,10 +49,11 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // das weg und mailtest auf false nach dem testen
+    } 
+    // else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // das weg und mailtest auf false nach dem testen
 
-      ngForm.resetForm();
-    }
+    //   ngForm.resetForm();
+    // }
   }
 
   checkboxChange(event: any) {

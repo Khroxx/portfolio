@@ -7,15 +7,15 @@
 }
 .headline{
     position: relative;
-    
-    >h2{
+    left: 50px;
+    >h3{
         position: absolute;
         font-size: 90px;
         font-weight: 400;
         text-align: center;
         rotate: -90deg;
         left: -200px;
-        top: 78px;    
+        top: 40px;    
     }
     
 }
@@ -28,11 +28,12 @@
         font-size: 64px;
         font-weight: 400;
         color: rgba(151, 71, 255, 1);
-        margin-block-start: -20px;
+        margin-block-start: 70px;
 
     }
 }
 button{
+    margin-top: 100px;
     border: none;
     background-color: rgba(112, 230, 28, 1);
     border-radius: 10px;
@@ -41,6 +42,7 @@ button{
     font-size: 23px;
     font-weight: 400;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
     >a {
         text-decoration: none;
         color: whitesmoke;
@@ -84,4 +86,140 @@ button{
     font-size: 23px;
     font-weight: 400;
     gap: 3px;
+}
+
+.shadow-left{
+    position: absolute;
+    left: 0;
+}
+.shadow-right{
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 1100px){
+    .head-names{
+        >h1{
+            font-size: 100px;
+        }
+        >h2{
+            font-size: 44px;
+    
+        }
+    }
+    .headline{
+        >h3{
+            font-size: 80px;
+            left: -140px;
+            top: 40px;    
+        }
+        
+    }
+}
+@media (max-width: 1000px){
+    .head-names{
+        >h1{
+            font-size: 80px;
+        }
+        >h2{
+            font-size: 38px;
+            margin-block-start: 50px;
+        }
+    }
+    .headline{
+        >h3{
+            font-size: 66px;
+            left: -120px;
+            top: 34px;    
+        }
+        
+    }
+}
+@media (max-width: 700px){
+    .scroll{
+        right: 20px;
+    }
+}
+@media (max-width: 600px){
+    .scroll{
+        right: 10px;
+    }
+    .shadow-left{
+        width: 50%;
+        top: 150px;
+    }
+    .shadow-right{
+        width: 50%;
+        top: 400px;
+    }
+    .headline{
+        >h3{
+            font-size: 50px;
+            left: -100px;
+            top: 30px;    
+        }
+    }
+    .head-names{
+        >h1{
+            font-size: 60px;
+        }
+        >h2{
+            font-size: 30px;
+            margin-block-start: 40px;
+        }
+    }
+}
+@media (max-width: 550px){
+    .top{
+        height: 60vh;
+    }
+    .headline{
+        left: 35px;
+        >h3{
+            font-size: 36px;
+            left: -70px;
+            top: 20px;    
+        }
+    }
+    .head-names{
+        >h1{
+            font-size: 50px;
+        }
+        >h2{
+            font-size: 20px;
+            margin-block-start: 10px;
+        }
+
+    }	
+    button{
+        margin-top: 50px;
+    }
+    .scroll{
+        display: none;
+    }
+}
+@media(max-width: 450px){
+    .spacer{
+        width: 50px;
+    }
+}
+@media(max-width: 350px){
+    .headline{
+        left: 25px;
+        >h3{
+         font-size: 30px;
+         left: -55px;
+         top: 16px;
+        }
+    }
+    .head-names{
+        >h1{
+           font-size: 40px;
+        }
+        >h2{
+          font-size: 18px;
+          margin-block-start: -10px;
+        }
+
+    }	
 }
