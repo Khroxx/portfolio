@@ -59,7 +59,9 @@ export class SingleProjectComponent {
     }
   ];
 
-
+  isLinkAvailable(project: { testlink: string | URL | undefined; }): boolean {
+    return !!project.testlink;
+  }
 
   githubLink(project: { gitlink: string | URL | undefined; }){
     window.open(project.gitlink, '_blank');

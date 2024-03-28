@@ -5,7 +5,7 @@
         <div class="hover-up">
             <div class="buttons">
                 <button (click)="githubLink(project)" class="buttonL">Github</button>
-                <button (click)="livetestLink(project)" class="buttonR">Live test</button>
+                <button [disabled]="!isLinkAvailable(project)" (click)="livetestLink(project)" class="buttonR">Live test</button>
             </div>
             <div class="description-container">
                 <h3>{{project.name}}</h3>

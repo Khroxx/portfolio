@@ -45,7 +45,7 @@ export class ContactComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://barisopa.de/sendMail.php', //Homepage ändern
+    endPoint: 'https://bari-sopa.com/sendMail.php', //Homepage ändern
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -95,7 +95,7 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
     this.isSubmitClicked = true;
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.isCheckboxChecked) {
+    if (ngForm.submitted && ngForm.form.valid && this.isCheckboxChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
