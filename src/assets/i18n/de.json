@@ -1,0 +1,31 @@
+{
+    "menuAbout": "Über mich",
+    "talkBtn": "Schreib mir",
+    "aboutme": "Über mich",
+    "aboutme1": "Hallo, ich bin ein Frontend-Entwickler aus Bayern, Deutschland. Aktuell absolviere ich eine Weiterbildung im Bereich Backend-Entwicklung an der Developer Akademie in München. Mein Ziel ist es, Cyber-Security zu erlernen und auszuüben.",
+    "aboutme2": "Ich bin sehr interessiert an Penetration Testing, dem Finden von Schwachstellen und dem Schließen derselben, um ein sicheres Netzwerk sowie Backend zu gewährleisten. In Zukunft plane ich, mindestens einen Bachelor-Abschluss in Cyber-Security zu erlangen.",
+    "aboutme3": "Zuvor habe ich 8 Jahre lang bei der Bundeswehr als Gebirgsjäger gedient und dort Disziplin, Kameradschaft, Durchhaltevermögen und den Willen gelernt, meinen Auftrag zu erfüllen.",
+    "skills": "Ich habe Projekterfahrung mit mehreren Frontend Technologien und Konzepten",
+    "skillsButton": "kontaktiere mich",
+    "portfolio": "Erkunde hier eine Auswahl meiner Projekte - Interargiere mit Ihnen um meine Fähigkeiten zu sehen",
+    "contact": "Kontakt",
+    "problem": "Gibt es ein Problem zu lösen?",
+    "contactMe": "Kontaktiere mich über dieses Formular. Ich bin sehr Interessiert daran von Ihnen zu hören, Ihre Ideen kennenzulernen und gemeinsam an einer Lösung zu arbeiten",
+    "needMe": "Brauchen Sie einen Frontend Developer?",
+    "contactB": " Kontaktiere mich!",
+    "nameEmpty": "Ein Name ist notwendig",
+    "emailEmpty": "Eine Email ist notwendig",
+    "messageEmpty": "Die Nachricht ist leer",
+    "policy_before_link": "Ich habe die",
+    "policy_link_text": " Datenschutzbestimmungen ",
+    "policy_after_link": " gelesen und akzeptiere das bearbeiten meiner Daten",
+    "policyAccept": "Bitte akzeptieren sie die Datenschutzbestimmungen",
+    "formSubmit": "Nachricht senden",
+
+    "polloloco": "Jump & Run Spiel basierend auf objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "crm": "Ein sehr einfaches Customer Relationship Management-System, das mit CRUD-Funktionalität funktioniert.",
+
+    "footerImprint": "Impressum"
+}
+

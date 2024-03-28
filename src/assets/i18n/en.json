@@ -1,0 +1,33 @@
+{
+    "menuAbout": "About Me",
+    "talkBtn": "Let's talk",
+    "aboutme": "About me",
+    "aboutme1": "Hi, I am a Frontend developer based in Bavaria, Germany. Currently, I am undergoing my backend training at the Developer Academy in Munich and I aspire to transition into Cyber Security.",
+    "aboutme2": "I am very interested in Pentesting, finding vulnerabilities, but also in closing them and helping to build a secure network and backend as a whole. Additionally, I aim to attain at least a bachelor's degree in Cyber Security.",
+    "aboutme3": "I previously served in the German army for 8 years in a mountain platoon. During this time, I learned discipline, camaraderie, endurance, and the determination to accomplish my mission.",
+    "skills": "I have gained experience in building projects with various front end technologies and concepts.",
+    "skillsButton": "Get in touch",
+    "portfolio": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "contact": "Contact",
+    "problem": "Got a problem to solve?",
+    "contactMe": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "needMe": "Need a Frontend developer?",
+    "contactB": " Contact me!",
+    "nameEmpty": "Your name is required",
+    "emailEmpty": "Your email is required",
+    "messageEmpty": "Your message is empty",
+    "policy_before_link": "I've read the",
+    "policy_link_text": " privacy policy ",
+    "policy_after_link": "and agree to the processing of my data as outlined",
+    "policyAccept": "Please accept the privacy policy",
+    "formSubmit": "Send Message :)",
+
+    "polloloco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "crm": "A very Simple Customer Relationship Management system working with CRUD functionality.",
+
+    "footerImprint": "Imprint"
+
+
+
+}

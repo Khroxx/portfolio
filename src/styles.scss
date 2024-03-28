@@ -120,6 +120,14 @@ h1, h2, h3, h4{
     margin: -100px 0 0; /* This negative margin is the same as the height */
     visibility: hidden;
 }
+@media (max-width: 340px){
+    #about-me::before,
+    #skills::before,
+    #projects::before {
+    height: 220px; /* Adjust this value to match your header's height */
+    margin: -100px 0 0; /* This negative margin is the same as the height */
+}
+}
 
 ::-webkit-scrollbar {
     width: 14px; /* Width of the vertical scrollbar */

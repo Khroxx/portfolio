@@ -1,5 +1,7 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../../language.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-single-project',
@@ -9,11 +11,32 @@ import { Component } from '@angular/core';
   styleUrl: './single-project.component.scss'
 })
 export class SingleProjectComponent {
+
+
+  constructor(private languageService: LanguageService, private http: HttpClient) {
+    this.languageService.currentLanguage.subscribe(language => {
+      this.loadJson(language);
+    });
+  }
+
+  loadJson(language: string) {
+    this.http.get(`/assets/i18n/${language}.json`).subscribe(
+      (data: any) => {
+        this.projects[0].description = data.polloloco;
+        this.projects[1].description = data.join;
+        this.projects[2].description = data.crm;
+      },
+      error => {
+        console.error('Error loading language file:', error);
+      }
+    );
+  }
+
   projects = [
     {
       name: 'El Pollo Loco',
       img: 'assets/img/pollo-loco.png',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: '',
       skillsUsed: ['JavaScript', 'HTML', 'CSS'],
       gitlink: 'https://github.com/Khroxx/Pollo-Loco-2',
       testlink: '/pollo-loco/index.html'
@@ -21,7 +44,7 @@ export class SingleProjectComponent {
     {
       name: 'Join',
       img: 'assets/img/join.png',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: '',
       skillsUsed: ['JavaScript', 'HTML', 'CSS'],
       gitlink: 'https://github.com/Khroxx/Join',
       testlink: '/join/index.html'
@@ -29,16 +52,14 @@ export class SingleProjectComponent {
     {
       name: 'Coming next...',
       img: 'assets/img/crm.png',
-      description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
+      description: '',
       skillsUsed: ['Angular', 'Firebase'],
       gitlink: 'https://github.com/Khroxx',
       testlink: ''
     }
   ];
 
-  constructor() {
-   
-  }
+
 
   githubLink(project: { gitlink: string | URL | undefined; }){
     window.open(project.gitlink, '_blank');

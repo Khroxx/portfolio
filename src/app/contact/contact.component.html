@@ -1,6 +1,6 @@
 <div class="contact-section">
 <div class="headline">
-    <h1>Contact</h1>
+    <h1>{{contact}}</h1>
     <div class="spacer"></div>
 </div>
 <div class="contact-container">
@@ -8,38 +8,38 @@
         <div class="spacer-container">
             <div class="spacer-text"></div>
         </div>
-        <h2>Got a problem to solve?</h2>
-        <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
-        <span>Need a Frontend developer?<b> Contact me!</b></span>
+        <h2>{{problem}}</h2>
+        <span>{{contactMe}}</span>
+        <span>{{needMe}}<b>{{contactB}}</b></span>
     </div>
     <div class="contact-form">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
             <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="Your name" [class.error]="!name.valid && name.touched" [class.success]="name.valid && name.touched">
             <div *ngIf="!name.valid && name.touched || isSubmitClicked && !name.valid"  class="errorMsg">
-                Your name is required
+                {{nameEmpty}}
             </div>
 
             <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"[class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
             <div *ngIf="!email.valid && email.touched || isSubmitClicked && !email.valid"  class="errorMsg">
-                Your email is required
+                {{emailEmpty}}
             </div>
 
             <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" cols="30" rows="10" placeholder="Your message"[class.error]="!message.valid && message.touched" [class.success]="message.valid && message.touched"></textarea>
             <div *ngIf="!message.valid && message.touched || isSubmitClicked && !message.valid"  class="errorMsg">
-                Your message is empty
+                {{messageEmpty}}
             </div>
 
             <div class="privacy-container">
                 <mat-checkbox color="accent" #check="ngModel" [(ngModel)]="isCheckboxChecked" id="checkbox" (change)="checkboxChange($event)" name="checkbox"></mat-checkbox> 
-                <p>I've read the <a href="/privacy_policy.html">privacy policy</a> and agree to the processing of my data as outlined</p>
+                <p>{{policy_before_link}}<a routerLink="/privacy-policy">{{policy_link_text}}</a>{{policy_after_link}}</p>
             </div>
             <div *ngIf="isSubmitClicked && !isCheckboxChecked" class="errorMsg">
-                Please accept the privacy policy
+                {{policyAccept}}
             </div>
 
             <div class="center">
-                <input type="submit" value="Send Message :)"  [class.disabled-button]="!isCheckboxChecked">
+                <input type="submit" value="{{formSubmit}}"  [class.disabled-button]="!isCheckboxChecked">
             </div>
             
         </form>
@@ -48,7 +48,4 @@
     <div class="scroll-up-container">
         <button><a href="#"><img src="assets/img/arrowup.png" alt=""></a></button>
     </div>
-    <!-- <div class="shadow-container">
-        <img class="shadow" src="assets/img/purple_shadow2.png" alt="">
-    </div> -->
 </div>

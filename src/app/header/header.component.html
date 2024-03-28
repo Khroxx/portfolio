@@ -1,13 +1,14 @@
 <div id="header">
     <a href="#"><h1>Bari</h1></a>
+    <button class="langBtn" (click)="changeLanguage('de')"><img src="assets/img/ger.png" alt="Deutsch"></button>
+    <button class="langBtn2" (click)="changeLanguage('en')"><img src="assets/img/eng.png" alt="English"></button>
+
     <div class="links">
-        <button><a href="#about-me">About me</a></button>
+        <button><a href="#about-me">{{menuAbout}}</a></button>
         <button><a href="#skills">Skills</a></button>
         <button><a href="#projects">Portfolio</a></button>
     </div>
-
-
-       <div class="burger-menu" (click)="toggleMenu()">
+      <div class="burger-menu" (click)="toggleMenu()">
         <div class="line" [ngClass]="{'x': menuOpen}"></div>
         <div class="line" [ngClass]="{'x': menuOpen}"></div>
         <div class="line" [ngClass]="{'x': menuOpen}"></div>

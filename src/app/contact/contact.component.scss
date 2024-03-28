@@ -107,6 +107,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeho
         >a{
             text-decoration: none;
             color: rgba(151, 71, 255, 1);
+            cursor: pointer;
         }
         
     }
@@ -294,5 +295,9 @@ input:-webkit-autofill:active {
 @media (max-width: 400px) {
     .spacer-text{
         width: 15px;    
+    }
+    input[type=submit]{
+        // padding: 10px 20px 10px 20px;
+        font-size: 18px;
     }
 }

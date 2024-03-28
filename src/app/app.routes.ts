@@ -1,18 +1,10 @@
 import { Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AtfComponent } from './atf/atf.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
+import { ImpressumComponent } from './impressum/impressum/impressum.component';
+import { MainComponent } from './main/main.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-    { path: 'header', component: HeaderComponent },
-    { path: 'atf', component: AtfComponent },
-    { path: 'about-me', component: AboutMeComponent },
-    { path: 'skills', component: SkillsComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'footer', component: FooterComponent }
+    { path: '', component: MainComponent, pathMatch: 'full' },
+    { path: 'impressum', component: ImpressumComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent }
 ];
