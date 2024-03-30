@@ -1,9 +1,10 @@
 .contact-section{
-    height: 80vh;
+    height: 80vh auto;
     overflow: hidden;
     background-image: url('/assets/img/purple_shadow2.png');
     background-position: bottom -250px right;
     background-repeat: no-repeat;
+    padding-bottom: 100px;
 }
 .headline{
     padding: 200px 0 100px 0;
@@ -42,7 +43,6 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    // height: 50vh;
 }
 .text{
     width: 40%;
@@ -116,6 +116,7 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeho
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
 }
 input[type=submit]{
@@ -126,7 +127,7 @@ input[type=submit]{
     width: 50%;
     cursor: pointer;
     font-size: 23px;
-    font-weight: 400;
+    font-weight: 400;   
 }
 
 
@@ -182,7 +183,10 @@ textarea.success{
     justify-content: flex-end;
     padding-bottom: 100px;
     padding-top: 50px;
+    position: absolute;
     >button{
+        position: relative;
+        bottom: 150px; // responsive
         background-color: rgba(112, 230, 28, 0);
         border: 2px solid white;
         width: 39px;
@@ -221,6 +225,10 @@ input:-webkit-autofill:active {
     -webkit-text-fill-color: #fff !important;
 }
 
+.formSuccess{
+    color: rgb(42, 252, 0);
+    font-size: 16px;
+}
 
 @media (max-width: 1340px){
     input[type=submit]{
@@ -228,10 +236,15 @@ input:-webkit-autofill:active {
         width: 250px;
     }
 }
-@media (max-width: 1000px){
-    .contact-section{
-        height: auto;
+@media (max-width: 1100px){
+    .scroll-up-container{
+        width: 99%;
+        >button{
+            bottom: 120px;
+        }
     }
+}
+@media (max-width: 1000px){
     .contact-container{
         flex-direction: column;
         align-items: center;
@@ -241,7 +254,6 @@ input:-webkit-autofill:active {
     .text{
         width: 80%;
         padding: 0 30px;
-        // text-align: center;
     }
     .contact-form{
         width: 100%;
@@ -258,8 +270,6 @@ input:-webkit-autofill:active {
     .contact-section{
         background-size: contain;
     }
-}
-@media (max-width: 700px) {
     .spacer-text{
         width: 35px;    
     }
@@ -299,5 +309,8 @@ input:-webkit-autofill:active {
     input[type=submit]{
         // padding: 10px 20px 10px 20px;
         font-size: 18px;
+    }
+    .contact-section{
+        padding-bottom: 120px;
     }
 }

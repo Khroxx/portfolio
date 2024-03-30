@@ -5,7 +5,9 @@
     width: calc(100% - 70px);
     padding: 100px 0 150px 70px;
     justify-content: space-between;
-    // height: 90vh;
+    // height: 90vh
+    position: relative;
+    z-index: 6;
 }
 .column{
     display: flex;

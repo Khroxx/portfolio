@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
 export class ContactComponent {
   contact: any;
   problem: any;
@@ -27,6 +28,7 @@ export class ContactComponent {
   policy_after_link: any;
   policyAccept: any;
   formSubmit: any;
+  formSuccess: any;
 
   constructor(private languageService: LanguageService, private http: HttpClient) {
     this.languageService.currentLanguage.subscribe(language => {
@@ -35,17 +37,18 @@ export class ContactComponent {
   }
 
   contactData = {
-    name : '',
-    email : '',
-    message : ''
-  }
+    name : "",
+    email : "",
+    message : "",
+  };
 
   isCheckboxChecked = false;
   isSubmitClicked = false;
-  mailTest = false;
+  formSubmitted = false;
+  formSent = false;
 
   post = {
-    endPoint: 'https://bari-sopa.com/sendMail.php', //Homepage ändern
+    endPoint: 'http://bari-sopa.com/sendMail.php', //Homepage ändern
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -54,6 +57,27 @@ export class ContactComponent {
       },
     },
   };
+
+  onSubmit(ngForm: NgForm) {
+    this.isSubmitClicked = true;
+    if (ngForm.submitted && ngForm.form.valid && this.isCheckboxChecked) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+            this.formSent = true;
+            this.formSubmitted = true;
+          },
+          error: (error) => {
+            console.error(error);
+            this.formSubmitted = false;
+            this.formSent = false;
+          },
+          // complete: () => console.info('send post complete'), // geht
+        });
+    }
+    this.formSubmitted = false;
+  }
 
   loadJson(language: string) {
     this.http.get(`/assets/i18n/${language}.json`).subscribe(
@@ -73,6 +97,7 @@ export class ContactComponent {
     this.emailEmpty = data.emailEmpty;
     this.messageEmpty = data.messageEmpty;
     this.formSubmit = data.formSubmit;
+    this.formSuccess = data.formSuccess;
     return data;
   }
 
@@ -93,26 +118,7 @@ export class ContactComponent {
     return data;
   }
 
-  onSubmit(ngForm: NgForm) {
-    this.isSubmitClicked = true;
-    if (ngForm.submitted && ngForm.form.valid && this.isCheckboxChecked) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } 
-    // else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // das weg und mailtest auf false nach dem testen
-
-    //   ngForm.resetForm();
-    // }
-  }
 
   checkboxChange(event: any) {
     this.isCheckboxChecked = event.checked;

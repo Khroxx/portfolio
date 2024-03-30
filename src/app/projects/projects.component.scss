@@ -1,6 +1,8 @@
 .portfolio{
     width: 100%;
     padding-bottom: 100px;
+    position: relative;
+    z-index: 5;
     >span{
         display: flex;
         margin-left: 124px;
