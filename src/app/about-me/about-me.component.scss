@@ -1,22 +1,32 @@
+section{
+    max-width: 2560px;
+    position: relative;
+    height: 1000px;
+}
 .about-me{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 80vh;
+    height: 100%;
 }
 .left{
-    width: 50%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-left: 100px;
-    padding-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
     gap: 35px;
     z-index: 5;
+    width: calc(50% - 120px);
     >h1{
         font-weight: 700;
         font-size: 90px;
+        max-width: 800px;
+    }
+    >p{
+        max-width: 800px;
     }
 }
 .info-text{
@@ -24,6 +34,7 @@
     flex-direction: row;
     align-items: center;
     gap: 35px;
+    max-width: 800px;
     >img{
         width: 50px;
         height: 50px;
@@ -38,59 +49,86 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 100%;
     >.profile {
-        height: 600px;
-        
+        position: absolute;
+        // height: 70%;
+        width: 80%;
+        background-image: url('/assets/img/photo_shadows.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    >.shadow{
+        display: none;
     }
 
-}
-.shadow{
-    position: absolute;
-    z-index: -5;
-    width: 100%;
-    height: 700px;
 }
 .bg-container{
     width: 100%;
     z-index: 1;
     position: absolute;
+    max-width: 2560px;
 }
 .bg{
     position: relative;
     width: 100%;
+    z-index: 1;
     right: 0;
-    top: -300px;
+    top: -500px;
+    overflow: hidden;
 }
 
-@media(max-width: 1550px){
-    .profile{
-        height: 500px !important;
+
+// WIDTH
+@media(max-width: 1900px){
+    .bg{
+        top: -430px;
     }
 }
-@media(max-width: 1340px){
-    .profile{
-        height: 400px !important;
+@media(max-width: 1300px){
+    section{
+        height: 900px;
+    }
+    .bg{
+        top: -380px;
     }
 }
-@media (max-width: 1100px){
+@media(max-width: 1180px){
+    .bg{
+        top: -330px;
+    }
+}
+@media (max-width: 1150px){
     .left{
         padding-left: 30px;
-    }
-    .profile{
-        height: 300px !important;
+        padding-right: 0px;
+        width: calc(50% - 30px);
+        
+        >h1{
+            font-size: 80px;
+            // height: 100px;
+            width: 400px;
+            text-align: center;
+        }
     }
 }
 
 @media (max-width: 1000px){
+    section{
+        height: 1200px;
+    }
     .about-me{
         flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
         gap: 74px;
-        height: 90vh;
+        
     }
     .left{
-        width: calc(100% - 50px);
-        justify-content: center;
+        padding: 0 45px;
+        width: calc(650px);
+        margin-bottom: 100px;
     }
     .right{
         width: 100%;
@@ -102,19 +140,24 @@
         top: -700px;
     }
 }
-@media(max-width: 670px){
-    .profile{
-        width: 100%;
-        height: 100% !important;
-
+@media (max-width: 780px){
+    .left{
+        padding: 0 25px;
+        width: 450px;
     }
 }
-@media (max-width: 539px){
+@media(max-width: 650px){
     .bg{
-        top: -700px;
+        top: -800px;
+    
     }
 }
-@media(max-width: 470px){
+@media (max-width: 550px){
+    .left{
+        width: calc(90% - 50px);
+    }
+}
+@media(max-width: 500px){
     .left{
         >h1{
             font-size: 70px;
@@ -124,12 +167,54 @@
 @media(max-width: 400px){
     .left{
         >h1{
-            font-size: 45px;
+            font-size: 55px;
+        }
+        >p{
+            font-size: 14px;
+        }
+        >span{
+            font-size: 14px;
+        }
+    }
+    .bg{
+        display: none;
+    }
+
+    
+}
+@media(max-width: 340px){
+    .left{
+        padding: 0 15px;
+        gap: 14px;
+        >h1{
+            font-size: 50px;
+            text-align: center;
         }
     }
 }
-@media(max-width: 340px){
+@media(max-width: 320px){
+
+}
+
+
+
+// HEIGHT
+@media(min-height: 1000px){
+
+}
+@media(max-height: 1000px){
     .bg{
-        top: -800px;
+        display: none;
+    }
+    section{
+        height: 1100px;
+    }
+    .about-me{
+        justify-content: space-between;
+    }
+}
+@media(max-height: 700px){
+    .about-me{
+        justify-content: space-between;
     }
 }

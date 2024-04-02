@@ -7,6 +7,7 @@
     padding: 37px 100px;
     position: fixed;
     z-index: 10;
+    // max-width: calc(2560px - 200px);
     >a{
         text-decoration: none;
         >h1{
@@ -19,10 +20,7 @@
                 cursor: pointer;
             }
         }
-    }
-    
-
-    
+    } 
 } 
 .langBtn{
     position: absolute;
@@ -155,6 +153,12 @@ animation: slide-out 0.3s forwards;
 }
 
 
+@media (min-width: 2560px){
+    #header{
+        max-width: calc(2560px - 200px);
+        width: calc(2560px - 200px);
+    }
+}
 @media (max-width: 1000px){
     .links{
         gap: 16px;
@@ -170,6 +174,7 @@ animation: slide-out 0.3s forwards;
     #header{
         padding: 37px 50px;
         width: calc(100% - 100px);
+        max-width: calc(2560px - 100px);
     }
 }
 @media (max-width: 440px){
@@ -180,3 +185,22 @@ animation: slide-out 0.3s forwards;
         left: 160px;
     }
 }
+@media (max-width: 350px){
+    #header{
+        padding: 20px 30px;
+        width: calc(100% - 60px);
+        
+    }
+}
+
+
+
+//LANDSCAPE
+
+@media (max-height: 500px) and (orientation: landscape){
+    #header{
+        padding: 10px 20px;
+        width: calc(100% - 40px);
+    }
+}
+

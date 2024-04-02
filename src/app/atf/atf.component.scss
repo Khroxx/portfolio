@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     height: 95vh;
+    max-width: 2560px;
 }
 .headline{
     position: relative;
@@ -17,7 +19,6 @@
         left: -200px;
         top: 40px;    
     }
-    
 }
 .head-names{
     >h1{
@@ -29,7 +30,6 @@
         font-weight: 400;
         color: rgba(151, 71, 255, 1);
         margin-block-start: 70px;
-
     }
 }
 button{
@@ -46,20 +46,21 @@ button{
     >a {
         text-decoration: none;
         color: whitesmoke;
-    
     }
     &:hover{
         cursor: pointer;
         background-color: rgba(151, 71, 255, 1);
         scale: 1.2;
         transition: all 0.2s ease-in-out;
-        
     }
 }
 .top-links{
     display: flex;
     align-items: center;
     gap: 42px;
+    max-width: 2560px;
+    position: relative;
+    z-index: 8;
     >a{
         text-decoration: none;
         &:hover{
@@ -73,8 +74,6 @@ button{
 .spacer{
     width: 100px;
     height: 0;
-
-    // border: 4px;
     border: 4px solid rgba(112, 230, 28, 1)
 }
 
@@ -87,16 +86,21 @@ button{
     font-weight: 400;
     gap: 3px;
 }
-
 .shadow-left{
     position: absolute;
     left: 0;
+
 }
 .shadow-right{
     position: absolute;
     right: 0;
 }
 
+@media (min-width: 2560px){
+    .top, .top-links{
+        width: 2560px;
+    }
+}
 @media (max-width: 1100px){
     .head-names{
         >h1{
@@ -199,6 +203,9 @@ button{
     .scroll{
         display: none;
     }
+    .shadow-right{
+        top: 200px;
+    }
 }
 @media(max-width: 450px){
     .spacer{
@@ -224,4 +231,79 @@ button{
         }
 
     }	
+}
+
+
+
+// HEIGHTS
+
+
+@media  (max-height: 1000px){
+    .top {
+        height: 900px;
+    };
+}
+@media (max-height: 800px){
+    .top {
+        padding-top: 100px;
+        height: 700px;
+    };
+    .shadow-left, .shadow-right{
+        height: 50%;
+    }
+}
+@media (max-height: 700px){
+    .top {
+        padding-top: 70px;
+        height: 600px;
+    };
+    .shadow-left, .shadow-right{
+        height: 80%;
+    }
+}
+@media (max-height: 600px){
+    .top {
+        padding-top: 200px;
+        height: 300px;
+    };
+    button{
+        margin-top: 50px;
+    }
+    .shadow-left, .shadow-right{
+        height: 90%;
+    }
+
+}
+
+@media (max-height: 500px){
+    .top {
+        padding-top: 150px;
+        height: 250px;
+    };
+    button{
+        margin-top: 30px;
+    }
+}
+@media (max-height: 400px){
+    .top {
+        height: 200px;
+    };
+}
+
+
+
+// LANDSCAPE
+
+@media (max-height: 500px) and (orientation: landscape){
+    .top{
+        padding-top: 52px;
+        // margin-top: 52px;
+        height: 350px;
+    }
+    .scroll{
+        display: none;
+    }
+    button{
+        padding: 10px 30px;
+    }
 }

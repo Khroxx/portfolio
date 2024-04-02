@@ -8,12 +8,15 @@
 }
 body{
     background-color: rgba(20, 29, 47, 1);
+    overflow-x: hidden;
+    // max-width: 2560px;
 
 }
 h1, h2, h3, h4{
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
 }
+
 
 @font-face {
     font-family: 'Poppins';
@@ -111,23 +114,110 @@ h1, h2, h3, h4{
     font-weight: 100;
     font-style: italic;
 }
-#about-me::before,
+
 #skills::before,
 #projects::before {
     content: "";
     display: block;
-    height: 150px; /* Adjust this value to match your header's height */
-    margin: -100px 0 0; /* This negative margin is the same as the height */
-    visibility: hidden;
+    height: 200px; /* Adjust this value to match your header's height */
+    margin: -200px 0 0; /* This negative margin is the same as the height */
 }
-@media (max-width: 340px){
-    #about-me::before,
-    #skills::before,
-    #projects::before {
-    height: 220px; /* Adjust this value to match your header's height */
-    margin: -100px 0 0; /* This negative margin is the same as the height */
+
+@media (min-width: 2560px){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+
 }
+@media (min-height: 1000px) {
+    #about-me::before{
+        content: "";
+        display: block;
+        height: 150px; /* Adjust this value to match your header's height */
+        margin: -150px 0 0; /* This negative margin is the same as the height */
+    }
 }
+@media (max-width: 1000px){
+    #about-me::before{
+        content: "";
+        display: block;
+        height: 100px; /* Adjust this value to match your header's height */
+        margin: -100px 0 0; /* This negative margin is the same as the height */
+    }
+}
+@media (max-width: 800px){
+    #skills::before{
+        content: "";
+        display: block;
+        height: 100px;
+        margin: -100px 0 0;
+    }
+}
+@media (max-width: 600px){
+    #skills::before{
+        height: 100px;
+        margin: -100px 0 0;
+    }
+}
+@media (max-width: 500px){
+    #projects::before{
+        content: "";
+        display: block;
+        height: 150px;
+        margin: -150px 0 0;
+    }
+}
+@media (max-width: 320px){
+    #projects::before{
+        height: 100px;
+        margin: -100px 0 0;
+    }
+}
+
+
+
+@media (max-height: 1000px){
+    #about-me::before{
+        content: "";
+        display: block;
+        height: 150px; /* Adjust this value to match your header's height */
+        margin: -150px 0 0; /* This negative margin is the same as the height */
+    }
+}
+
+
+
+// LANDSCAPE
+
+@media (max-height: 500px) and (orientation: landscape){
+    #about-me::before{
+        content: "";
+        display: block;
+        height: 30px; /* Adjust this value to match your header's height */
+        margin: -30px 0 0; /* This negative margin is the same as the height */
+    }
+    #skills::before{
+        content: "";
+        display: block;
+        height: 30px;
+        margin: -30px 0 0;
+    }
+    #projects::before{
+        content: "";
+        display: block;
+        height: 100px;
+        margin: -100px 0 0;
+    }
+    #contact::before{
+        content: "";
+        display: block;
+        height: 100px;
+        margin: -100px 0 0;
+    }
+}
+
+
 
 ::-webkit-scrollbar {
     width: 14px; /* Width of the vertical scrollbar */

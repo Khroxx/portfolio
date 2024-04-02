@@ -3,6 +3,7 @@ import { SingleProjectComponent } from './single-project/single-project.componen
 import { LanguageService } from '../language.service';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -18,6 +19,8 @@ export class ProjectsComponent {
       this.loadJson(language);
     });
   }
+
+
 
   loadJson(language: string) {
     this.http.get(`/assets/i18n/${language}.json`).subscribe(

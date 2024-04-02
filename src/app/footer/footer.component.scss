@@ -5,10 +5,10 @@ footer{
     border-top: 4px solid rgba(112, 230, 28, 1);
     justify-content: center;
     background-color: rgba(20, 29, 47, 1);
+    position: relative;
 }
 .footer-container{
     display: flex;
-    // width: 1480px;
     width: 80%;
     flex-direction: row;
     justify-content: space-between;

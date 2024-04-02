@@ -5,15 +5,18 @@
     background-position: bottom -250px right;
     background-repeat: no-repeat;
     padding-bottom: 100px;
+    max-width: 2560px;
+    position: relative;
 }
 .headline{
-    padding: 200px 0 100px 0;
+    padding: 20px 0 100px 0;
     display: flex;
     text-align: center;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
     gap: 40px;
+    
     >h1{
         font-size: 90px;
         font-weight: 700;
@@ -57,7 +60,7 @@
     >span{
         font-size: 16px;
         font-weight: 400;
-        
+        max-width: 720px;
     }
 }
 .contact-form{
@@ -70,10 +73,18 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: 16px;
-        >input{
-            display: flex;
-            justify-content: center;
+        gap: 20px;
+        >div{
+            >input{
+                display: flex;
+                justify-content: center;
+            }
+            >textarea{
+                display: flex;
+                justify-content: center;
+                width: calc(100% - 50px);
+            }
+            
         }
     }
     
@@ -98,26 +109,39 @@ input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeho
 
 .privacy-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 10px;
     align-items: center;
-    >p{
-        margin: 0;
-        >a{
-            text-decoration: none;
-            color: rgba(151, 71, 255, 1);
-            cursor: pointer;
+    height: 80px;
+    >.privacy-top{
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        >p{
+            margin: 0;
+            >a{
+                text-decoration: none;
+                color: rgba(151, 71, 255, 1);
+                cursor: pointer;
+            }
+            
         }
-        
     }
 }
+.policyAccept{
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    // padding-top: 20px;
 }
 input[type=submit]{
     background: rgba(112, 230, 28, 1);
@@ -129,14 +153,20 @@ input[type=submit]{
     font-size: 23px;
     font-weight: 400;   
 }
+.input-container{
+    width: 100%;
+    position: relative;
+    >input{
+        width: calc(100% - 50px);
+    }
+    >.errorMsg{
+        position: absolute;
+        color: red;
+        font-size: 16px;
+        font-weight: 400;
+    }
 
-
-.errorMsg{
-    color: red;
-    font-size: 16px;
-    font-weight: 400;
 }
-
 input.error{
     background-image: url('/assets/img/error.png') !important;
     background-repeat: no-repeat;
@@ -186,7 +216,7 @@ textarea.success{
     position: absolute;
     >button{
         position: relative;
-        bottom: 150px; // responsive
+        bottom: 50px; // responsive
         background-color: rgba(112, 230, 28, 0);
         border: 2px solid white;
         width: 39px;
@@ -235,13 +265,31 @@ input:-webkit-autofill:active {
         padding: 10px 15px;
         width: 250px;
     }
+
+}
+@media (max-width: 1150px){
+    .input-container{
+        >.errorMsg{
+            font-size: 14px;
+        }
+    }
 }
 @media (max-width: 1100px){
+    textarea{
+        margin-bottom: 4px !important;
+    }
     .scroll-up-container{
-        width: 99%;
+        width: 97%;
         >button{
-            bottom: 120px;
+            bottom: 30px;
         }
+    }
+    .privacy-top{
+        height: 55px;
+    }
+    .errorPolicy{
+        height: 25px;
+        margin: 0;
     }
 }
 @media (max-width: 1000px){
@@ -264,7 +312,7 @@ input:-webkit-autofill:active {
 }
 @media (max-width: 700px) {
     .headline{
-        padding: 200px 0 100px 30px;
+        padding: 20px 0 100px 30px;
         width: calc(100% - 30px);
     }
     .contact-section{
@@ -274,10 +322,28 @@ input:-webkit-autofill:active {
         width: 35px;    
     }
 }
-@media (max-width: 470px) {
+@media (max-width: 550px) {
+    .privacy-container{
+        height: 100px;
+        
+    }
+    .policyAccept{
+        font-size: 14px !important;
+    }
+    .input-container{
+        >p{
+           font-size: 14px; 
+        }
+    
+    }
+    .scroll-up-container{
+        width: 95%;
+    }
+}
+@media (max-width: 500px) {
     .headline{
-        padding: 200px 0 100px 20px;
-        width: 100%;
+        padding: 20px 0 100px 20px;
+        width: calc(100% - 20px);
         >h1{
             font-size: 70px;
         }
@@ -302,15 +368,50 @@ input:-webkit-autofill:active {
         }
     }
 }
+@media (max-width: 472px) and (max-height: 1200px) {
+    .contact-section{
+        height: 1300px;
+    }
+}
 @media (max-width: 400px) {
+    .headline{
+        >h1{
+            font-size: 55px;
+        }
+    }
     .spacer-text{
         width: 15px;    
     }
     input[type=submit]{
-        // padding: 10px 20px 10px 20px;
         font-size: 18px;
     }
+    .contact-container{
+        justify-content: space-between;
+    }
+    .center{
+        padding-top: 20px;
+    }
+    .privacy-container{
+        position: relative;
+        top: 15px;
+        height: 150px;
+        gap: 8px;
+    }
     .contact-section{
-        padding-bottom: 120px;
+        height: 1350px;
+    }
+}
+
+
+//HIGHTS
+
+// @media (max-height: 1200px){
+//     .contact-section{
+//         height: 1300px000000;
+//     }
+// }
+@media (max-height: 1000px){
+    .left{
+        margin-bottom: 0 !important;
     }
 }
