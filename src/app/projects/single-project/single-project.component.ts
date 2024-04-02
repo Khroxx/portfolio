@@ -41,7 +41,7 @@ export class SingleProjectComponent {
       description: '',
       skillsUsed: ['JavaScript', 'HTML', 'CSS'],
       gitlink: 'https://github.com/Khroxx/Pollo-Loco-2',
-      testlink: '/pollo-loco/index.html'
+      testlink: 'projects/pollo-loco/index.html'
     },
     {
       name: 'Join',
@@ -49,7 +49,7 @@ export class SingleProjectComponent {
       description: '',
       skillsUsed: ['JavaScript', 'HTML', 'CSS'],
       gitlink: 'https://github.com/Khroxx/Join',
-      testlink: '/join/index.html'
+      testlink: 'projects/join/index.html'
     },
     // {
     //   name: 'Coming next...',
