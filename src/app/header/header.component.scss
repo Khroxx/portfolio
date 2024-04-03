@@ -154,12 +154,12 @@ animation: slide-out 0.3s forwards;
 }
 
 
-// @media (min-width: 2560px){
-//     #header{
-//         max-width: calc(2560px - 200px);
-//         width: calc(2560px - 200px);
-//     }
-// }
+@media (min-width: 1920px){
+    #header{
+        // max-width: calc(1920px - 200px);
+        width: calc(1920px - 200px);
+    }
+}
 @media (max-width: 1000px){
     .links{
         gap: 16px;
