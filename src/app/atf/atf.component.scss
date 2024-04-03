@@ -5,9 +5,12 @@
     flex-direction: column;
     position: relative;
     height: 95vh;
+    // width: 100%;   
+    // width: 100vw;
     max-width: 1920px;
 }
 .headline{
+    max-width: 1920px; 
     position: relative;
     left: 50px;
     >h3{
@@ -74,7 +77,7 @@ button{
 .spacer{
     width: 100px;
     height: 0;
-    border: 4px solid rgba(112, 230, 28, 1)
+    border: 4px solid rgba(112, 230, 28, 1);
 }
 
 .scroll{
@@ -85,6 +88,9 @@ button{
     font-size: 23px;
     font-weight: 400;
     gap: 3px;
+}
+.shadow-container{
+    display: none;
 }
 .shadow-left{
     position: absolute;
@@ -97,8 +103,35 @@ button{
 }
 
 @media (min-width: 1920px){
-    .top, .top-links{
-        width: 1920px;
+    .shadow-container{
+        // width: 100%;
+        position: absolute;
+        height: 95vh;
+        display: flex;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+    }
+    .shadow-left, .shadow-right{
+        display: none;
+    }
+    .shadow-left-big{
+        position: relative;
+        width: 45%;
+    
+    }
+    .shadow-right-big{
+        position: relative;
+        width: 45%;
+    }
+    .top-links{
+        width: calc(1920px - 200px);
+        padding-left: 150px;
+    }
+    .spacer{
+        position: absolute;
+        width: 2000px;
+        left: -1900px;
     }
 }
 @media (max-width: 1100px){

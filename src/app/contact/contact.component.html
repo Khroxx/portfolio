@@ -1,7 +1,15 @@
+<div class="shadow-container">
+    <img src="assets/img/purple_shadow2.png" alt="">
+</div>
+<div class="spacer-big-container">
+    <div class="spacer-big"></div>
+</div>
+
 <div class="contact-section">
 <div data-aos="fade-left" class="headline">
     <h1>{{contact}}</h1>
     <div class="spacer"></div>
+    
 </div>
 <div class="contact-container">
     <div data-aos="fade-right" class="text">
@@ -21,7 +29,7 @@
             </div>
 
             <div class="input-container">
-                <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="{{emailPh}}" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"[class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
+                <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="{{emailPh}}" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
                 <p class="errorMsg" *ngIf="!email.valid && email.touched || isSubmitClicked && !email.valid && !formSubmitted">{{emailEmpty}}</p>
             </div>
             
@@ -42,7 +50,7 @@
             
 
             <div class="center">
-                <input type="submit" value="{{formSubmit}}"  [class.disabled-button]="!isCheckboxChecked">
+                <input type="submit" value="{{formSubmit}}" [disabled]="!name.valid || !email.valid || !message.valid || !isCheckboxChecked" [class.disabled-button]="!name.valid || !email.valid || !message.valid || !isCheckboxChecked">
                 <div *ngIf="formSent && !message.touched && !email.touched && !name.touched" class="formSuccess">
                     {{formSuccess}}
                 </div>
@@ -55,3 +63,5 @@
     <button><a href="#"><img src="assets/img/arrowup.png" alt=""></a></button>
 </div>
 </div>
+
+<!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->

@@ -68,7 +68,7 @@ section{
     width: 100%;
     z-index: 1;
     position: absolute;
-    max-width: 2560px;
+    max-width: 1920px;
 }
 .bg{
     position: relative;
@@ -78,9 +78,31 @@ section{
     top: -500px;
     overflow: hidden;
 }
+.bg-big-container{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.bg-big{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    top: -550px;
+}
 
 
 // WIDTH
+@media (min-width: 1920px){
+    .bg-container{
+        display: none;
+    }
+    .bg-big-container{
+        display: flex;
+        justify-content: center;
+    }
+}
 @media(max-width: 1900px){
     .bg{
         top: -430px;

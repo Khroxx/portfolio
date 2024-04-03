@@ -128,6 +128,12 @@ h1, h2, h3, h4{
         display: flex;
         justify-content: center;
         width: 100%;
+        overflow-x: visible;
+    }
+    .root{
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
 }
