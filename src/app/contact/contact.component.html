@@ -16,17 +16,17 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
 
             <div class="input-container">
-                <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="Your name" [class.error]="!name.valid && name.touched" [class.success]="name.valid && name.touched">
+                <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="{{namePh}}" [class.error]="!name.valid && name.touched" [class.success]="name.valid && name.touched">
                 <p class="errorMsg" *ngIf="!name.valid && name.touched || isSubmitClicked && !name.valid && !formSubmitted">{{nameEmpty}}</p>
             </div>
 
             <div class="input-container">
-                <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"[class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
+                <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="{{emailPh}}" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"[class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
                 <p class="errorMsg" *ngIf="!email.valid && email.touched || isSubmitClicked && !email.valid && !formSubmitted">{{emailEmpty}}</p>
             </div>
             
             <div class="input-container">
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" cols="30" rows="10" placeholder="Your message"[class.error]="!message.valid && message.touched" [class.success]="message.valid && message.touched"></textarea>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" cols="30" rows="10" placeholder="{{messagePh}}" [class.error]="!message.valid && message.touched" [class.success]="message.valid && message.touched"></textarea>
                 <p class="errorMsg" *ngIf="!message.valid && message.touched || isSubmitClicked && !message.valid && !formSubmitted">{{messageEmpty}}</p>
             </div>
 

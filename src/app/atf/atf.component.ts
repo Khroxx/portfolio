@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AtfComponent {
   talkBtn: any;
+  scrollDown: any;
 
   constructor(private languageService: LanguageService, private http: HttpClient) {
     this.languageService.currentLanguage.subscribe(language => {
@@ -22,6 +23,7 @@ export class AtfComponent {
     this.http.get(`/assets/i18n/${language}.json`).subscribe(
       (data: any) => {
         this.talkBtn = data.talkBtn;
+        this.scrollDown = data.scrollDown;
       },
       error => {
         console.error('Error loading language file:', error);

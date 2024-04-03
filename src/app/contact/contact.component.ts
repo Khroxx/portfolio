@@ -21,8 +21,11 @@ export class ContactComponent {
   needMe: any;
   contactB: any;
   nameEmpty: any;
+  namePh: any;
   emailEmpty: any;
+  emailPh: any;
   messageEmpty: any;
+  messagePh: any;
   policy_before_link: any;
   policy_link_text: any;
   policy_after_link: any;
@@ -94,8 +97,11 @@ export class ContactComponent {
 
   loadFormJson(data: any) {
     this.nameEmpty = data.nameEmpty;
+    this.namePh = data.namePh;
     this.emailEmpty = data.emailEmpty;
+    this.emailPh = data.emailPh;
     this.messageEmpty = data.messageEmpty;
+    this.messagePh = data.messagePh;
     this.formSubmit = data.formSubmit;
     this.formSuccess = data.formSuccess;
     return data;

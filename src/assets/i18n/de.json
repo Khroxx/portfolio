@@ -1,4 +1,5 @@
 {
+    "scrollDown": "Scroll Runter",
     "menuAbout": "Über mich",
     "talkBtn": "Schreib mir",
     "aboutme": "Über mich",
@@ -14,8 +15,11 @@
     "needMe": "Brauchen Sie einen Frontend Developer?",
     "contactB": " Kontaktiere mich!",
     "nameEmpty": "Ein Name ist notwendig",
+    "namePh": "Ihr Name",
     "emailEmpty": "Eine Email ist notwendig",
+    "emailPh": "Ihre Email",
     "messageEmpty": "Die Nachricht ist leer",
+    "messagePh": "Ihre Nachricht",
     "policy_before_link": "Ich habe die",
     "policy_link_text": " Datenschutzbestimmungen ",
     "policy_after_link": " gelesen und akzeptiere das bearbeiten meiner Daten",

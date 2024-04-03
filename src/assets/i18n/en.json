@@ -1,4 +1,5 @@
 {
+    "scrollDown": "Scroll down",
     "menuAbout": "About Me",
     "talkBtn": "Let's talk",
     "aboutme": "About me",
@@ -14,8 +15,11 @@
     "needMe": "Need a Frontend developer?",
     "contactB": " Contact me!",
     "nameEmpty": "Your name is required",
+    "namePh": "Your name",
     "emailEmpty": "Your email is required",
+    "emailPh": "Your email",
     "messageEmpty": "Your message is empty",
+    "messagePh": "Your message",
     "policy_before_link": "I've read the",
     "policy_link_text": " privacy policy ",
     "policy_after_link": "and agree to the processing of my data as outlined",
