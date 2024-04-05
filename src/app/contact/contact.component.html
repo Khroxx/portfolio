@@ -29,7 +29,7 @@
             </div>
 
             <div class="input-container">
-                <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="{{emailPh}}" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
+                <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="{{emailPh}}" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$" [class.error]="!email.valid && email.touched"  [class.success]="email.valid && email.touched">
                 <p class="errorMsg" *ngIf="!email.valid && email.touched || isSubmitClicked && !email.valid && !formSubmitted">{{emailEmpty}}</p>
             </div>
             
@@ -65,3 +65,4 @@
 </div>
 
 <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
+<!-- ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ -->
